@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="-305.0790029429741" y="-153.13910189739462">Order</node>
+    <node x="-304.02649541444055" y="249.67922210528968">IDatabaseOrder</node>
+    <node x="-642.1077913307795" y="-413.87544450885855">Category</node>
+    <node x="-562.6898168777208" y="387.324773901227">Database</node>
+    <node x="-926.557681374368" y="349.3557013259775">IDatabaseCustomer</node>
+    <node x="-349.286594574099" y="-313.5215652394084">OrderStatus</node>
+    <node x="-290.55688808007324" y="496.42843956042543">OracleDatabase</node>
+    <node x="-641.7888273030571" y="-255.02345738300863">Product</node>
+    <node x="-604.0525909563801" y="251.34057530751534">IDatabaseProducts</node>
+    <node x="-948.0077960217661" y="-270.67872498270106">Customer</node>
+    <node x="-637.0350900067527" y="593.018814368104">MSSQLServerDatabase</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="IDatabaseProducts" target="Product" relationship="DEPENDENCY">
+      <point x="-4.09043619924887E-4" y="-37.49957530751533" />
+      <point x="-484.053" y="204.0" />
+      <point x="-379.0" y="204.0" />
+      <point x="-379.0" y="-150.023" />
+      <point x="115.99982730305715" y="4.5738300863717996E-4" />
+    </edge>
+    <edge source="Database" target="IDatabaseOrder" relationship="REALIZATION">
+      <point x="100.0" y="-15.0" />
+      <point x="-210.02649541444055" y="443.824773901227" />
+      <point x="0.0" y="37.5" />
+    </edge>
+    <edge source="OracleDatabase" target="Order" relationship="DEPENDENCY">
+      <point x="-131.0" y="-4.3956042543413787E-4" />
+      <point x="-328.0" y="589.428" />
+      <point x="-328.0" y="17.861000000000004" />
+      <point x="-212.4999970570259" y="1.0189739462873604E-4" />
+    </edge>
+    <edge source="Order" target="Database" relationship="TO_ONE">
+      <point x="0.0" y="171.0" />
+      <point x="-92.57900294297411" y="458.824773901227" />
+      <point x="100.0" y="0.0" />
+    </edge>
+    <edge source="IDatabaseCustomer" target="Customer" relationship="DEPENDENCY">
+      <point x="0.0" y="-37.5" />
+      <point x="29.950114647398095" y="93.5" />
+    </edge>
+    <edge source="Order" target="Customer" relationship="TO_ONE">
+      <point x="0.0" y="-171.0" />
+      <point x="-92.57900294297411" y="-431.37544450885855" />
+      <point x="-825.5077960217661" y="-431.37544450885855" />
+      <point x="0.0" y="-93.5" />
+    </edge>
+    <edge source="OracleDatabase" target="Database" relationship="GENERALIZATION">
+      <point x="-131.00011191992678" y="-4.3956042543413787E-4" />
+      <point x="-350.0" y="589.428" />
+      <point x="-350.0" y="559.0" />
+      <point x="-427.0" y="559.0" />
+      <point x="-427.0" y="571.0" />
+      <point x="-462.69" y="571.0" />
+      <point x="-1.8312227922478996E-4" y="71.500226098773" />
+    </edge>
+    <edge source="MSSQLServerDatabase" target="Database" relationship="GENERALIZATION">
+      <point x="67.53509000675274" y="-92.99981436810401" />
+      <point x="-427.0" y="571.0" />
+      <point x="-462.69" y="571.0" />
+      <point x="-1.8312227922478996E-4" y="71.500226098773" />
+    </edge>
+    <edge source="OracleDatabase" target="Product" relationship="CREATE">
+      <point x="-1.1191992675207985E-4" y="92.99956043957457" />
+      <point x="-159.557" y="796.519" />
+      <point x="-965.508" y="796.519" />
+      <point x="-965.508" y="274.0" />
+      <point x="-634.0" y="274.0" />
+      <point x="-634.0" y="17.861000000000004" />
+      <point x="-525.789" y="17.861000000000004" />
+      <point x="-1.726969428545999E-4" y="105.0" />
+    </edge>
+    <edge source="Product" target="Product" relationship="DEPENDENCY">
+      <point x="115.99982730305715" y="4.5738300863717996E-4" />
+      <point x="-379.0" y="-150.023" />
+      <point x="-379.0" y="-150.023" />
+      <point x="115.99982730305715" y="4.5738300863717996E-4" />
+    </edge>
+    <edge source="Database" target="IDatabaseProducts" relationship="REALIZATION">
+      <point x="-21.3627740786593" y="-71.5" />
+      <point x="0.0" y="37.5" />
+    </edge>
+    <edge source="OracleDatabase" target="Customer" relationship="CREATE">
+      <point x="-131.0" y="-18.92843956042543" />
+      <point x="-345.0" y="570.5" />
+      <point x="-345.0" y="189.0" />
+      <point x="-825.508" y="189.0" />
+      <point x="-2.0397823391249403E-4" y="93.49972498270105" />
+    </edge>
+    <edge source="Order" target="Product" relationship="TO_MANY">
+      <point x="-212.5" y="-152.88389810260537" />
+      <point x="116.0" y="15.000457383008637" />
+    </edge>
+    <edge source="Order" target="OrderStatus" relationship="TO_ONE">
+      <point x="-141.7075916311249" y="-171.0" />
+      <point x="0.0" y="49.0" />
+    </edge>
+    <edge source="Product" target="Category" relationship="TO_ONE">
+      <point x="-10.318964027722359" y="-105.0" />
+      <point x="0.0" y="49.0" />
+    </edge>
+    <edge source="MSSQLServerDatabase" target="Product" relationship="CREATE">
+      <point x="-14.999909993247229" y="-92.99981436810401" />
+      <point x="-509.53499999999997" y="570.5" />
+      <point x="-634.0" y="570.5" />
+      <point x="-634.0" y="17.861000000000004" />
+      <point x="-525.789" y="17.861000000000004" />
+      <point x="-1.726969428545999E-4" y="105.0" />
+    </edge>
+    <edge source="IDatabaseOrder" target="Order" relationship="DEPENDENCY">
+      <point x="-93.99950458555946" y="-2.2210528968003018E-4" />
+      <point x="-328.0" y="287.179" />
+      <point x="-328.0" y="17.861000000000004" />
+      <point x="-212.4999970570259" y="1.0189739462873604E-4" />
+    </edge>
+    <edge source="MSSQLServerDatabase" target="Customer" relationship="CREATE">
+      <point x="9.000675277093251E-5" y="-92.99981436810401" />
+      <point x="-494.53499999999997" y="547.825" />
+      <point x="-345.0" y="547.825" />
+      <point x="-345.0" y="189.0" />
+      <point x="-825.508" y="189.0" />
+      <point x="-2.0397823391249403E-4" y="93.49972498270105" />
+    </edge>
+    <edge source="MSSQLServerDatabase" target="Order" relationship="DEPENDENCY">
+      <point x="142.5" y="1.8563189598808094E-4" />
+      <point x="-328.0" y="686.019" />
+      <point x="-328.0" y="17.861000000000004" />
+      <point x="-212.4999970570259" y="1.0189739462873604E-4" />
+    </edge>
+    <edge source="Database" target="IDatabaseCustomer" relationship="REALIZATION">
+      <point x="-100.0" y="-64.0" />
+      <point x="131.0" y="7.96907257524947" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="1.2079976481184949" showDependencies="true" x="39.23015922330097" y="-194.2048" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

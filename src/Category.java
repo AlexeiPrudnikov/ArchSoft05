@@ -1,0 +1,3 @@
+public enum Category {
+    PHONE, TABLET, LAPTOP, DESCTOP, SMARTWATCH, HEADPHONES
+    }
